@@ -1,0 +1,54 @@
+# subopt sampling parameters
+NUM_SUBOPT: 1000
+NUM_ROUND_SUBOPT: 200
+DELTA_RATIO: .20
+K_LIMIT: 16
+SORT_LIMIT: 100
+USER_LIMIT: 100000
+MAX_OVERLAP: 0.05
+FINAL_OVERLAP: 0.30
+ROUNDS: 1
+
+# i/o parameters
+INPUT_FORMAT: 0
+OUTPUT_FORMAT: 0
+OUTPUT_LINE_LENGTH: 60
+SUB_MATRIX_TYPE: 0
+SUB_MATRIX: /razor/0/common/blast/data/BLOSUM62
+ALIGN_MODE: 4
+
+# nalign/hmap parameters
+# note: gi and ge below match the published values
+# note: the commented out cmw was found by optimizing 
+# against tr075 (no ss bias)
+#GAP_INIT_PENALTY:   4.71
+#GAP_EXTN_PENALTY:   0.37
+#CORE_MATCH_WEIGHT:  0.55
+CORE_GAP_WEIGHT:    1
+MOTIF_MATCH_WEIGHT: 0.1
+NORMALIZE_SIM_MTX:  1
+ZERO_SHIFT:         0.12
+
+# gn2 parameters
+# note: coiled regions and ss elements have 
+# independent gi and ge penalties.  nalign/hmap
+# parameter names are no longer used
+GI_COIL:          1.2
+GE_COIL:          0.08
+GI_SS:            100
+GE_SS:            1
+SS_WEIGHT:        2.2
+CN_WEIGHT:        3.4
+HP_WEIGHT:        1.2
+HB_WEIGHT:        0.13
+IC_WEIGHT:        0.09
+DEL_DIST_CONSTR:  8
+GN2_SHIFT:        1.2
+
+# ssdg is no longer used
+# turn on/off sec str dependent gap penalty.
+# gn2 parameters above optimized for ssdg=1
+#SS_DEPENDENT_GP:  1
+
+VERBOSE: 0
+LOG_FILE:
